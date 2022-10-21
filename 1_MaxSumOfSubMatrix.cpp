@@ -1,5 +1,10 @@
+'''
+效率极低，容易超时
+'''
+
 #include <iostream>
 using namespace std;
+
 
 int len(int x)
 {

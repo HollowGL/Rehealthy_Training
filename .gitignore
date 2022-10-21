@@ -1,0 +1,9 @@
+# Binaries
+*.exe
+
+# configuration for VScode
+.vscode
+
+# files for test
+test.cpp
+*.txt
