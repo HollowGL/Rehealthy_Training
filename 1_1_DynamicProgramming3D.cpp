@@ -1,6 +1,4 @@
-'''
-refer: https://github.com/zlysm/MyExercise/blob/main/maxSumOfSubMatrix.cpp
-'''
+// refer: https://github.com/zlysm/MyExercise/blob/main/maxSumOfSubMatrix.cpp
 
 #include <iostream>
 
