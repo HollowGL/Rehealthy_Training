@@ -3,26 +3,26 @@ using namespace std;
 
 int main() {
 
-    int m, n, x, y;
+    int m, n, x, y;           // m行n列
     cin >> m >> n >> x >> y;
 
-    int **num = new int*[n];
-    for (int i = 0; i < n; i++) {
-        num[i] = new int[m];
-    }
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
+    int **num = new int*[m];
+    for (int i = 0; i < m; i++) {
+        num[i] = new int[n];
+        for (int j = 0; j < n; j++) {
             cin >> num[i][j];
         }
     }
 
-    int **sub = new int*[n - y + 1];
     int max = -1000;
+    int** sub = new int*[m - x + 1];
     for (int i = 0; i < m - x + 1; i++) {
+        sub[i] = new int[n - y + 1];
+
         for (int j = 0; j < n - y + 1; j++) {
             sub[i][j] = 0;
-            for (int k1 = 0; k1 < x; k1 ++) {
-                for (int k2 = 0; k2 < y; k2 ++) {
+            for (int k1 = 0; k1 < x; k1++) {
+                for (int k2 = 0; k2 < y; k2++) {
                     sub[i][j] += num[i + k1][j + k2];
                 }
             }
@@ -33,7 +33,7 @@ int main() {
 
     cout << max << endl;
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < m; i++)
         delete num[i];
     delete[] num;
     for (int i = 0; i < m - x + 1; i++)
